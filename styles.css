@@ -1,0 +1,184 @@
+/* Flex container for the vertically arranging page */
+.container {
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   padding: 2em 0;
+   overflow: auto;
+}
+/* take up the whole page */
+html, body {
+   height: 100%;
+   margin: 0;
+   padding: 0;
+   overflow-y: auto;
+}
+/* monospace text */
+body {
+   font-family: monospace;
+}
+/* Dark mode styling */
+.dark-mode {
+   background-color: #121212;
+   color: #e0e0e0;
+}
+/* Remove link coloring and underlining */
+a {
+   color: inherit;
+   text-decoration: none;
+}
+ /* Prevents text from breaking into a new line */
+.no-wrap {
+   white-space: nowrap;
+}
+
+/* Wraps the side images and content */
+.content-wrap {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   max-width: 800px;
+   margin: 0 auto;
+   width: 100%;
+}
+
+/* Side skeleton images */
+.side-image {
+   height: 600px;
+   object-fit: contain;
+}
+
+/* Header styling */
+header {
+   text-align: center;
+}
+header hr {
+   border: 0;
+   height: 3px;
+   background: #333;
+   width: 90%;
+   margin: 0 auto 1em; 
+}
+header h2 {
+   display: inline;
+   color: #555;
+}
+.inline-header {
+   display: inline;
+   font-size: 1.2em;
+   font-weight: bold;
+   color: #555;
+}
+
+/* Footer styling */
+footer {
+   display: flex;
+   flex-direction: column;
+   flex-shrink: 0;
+   align-items: center;
+   text-align: center;
+   padding: 3em;
+}
+.social-icons {
+   display: flex;
+   justify-content: center;
+   gap: 10px;
+}
+.social-icon {
+   width: 32px;
+   height: 32px;
+}
+.dark-mode-container {
+   margin-top: 6px;
+   display: flex; 
+   justify-content: center;
+   gap: 10px;
+}
+.home-icon {
+   width: 32px;
+   height: 32px;
+}
+.toggle-img {
+   width: 32px;
+   height: 32px;
+}
+
+/* desktop styling */
+@media (pointer: fine) {
+   .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+   }
+
+   .poem {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: left;
+   }
+}
+
+/* mobile styling */
+@media (pointer: coarse) {
+   header {
+      font-size: 2em;
+   }
+   header hr {
+      height: 6px;
+   }
+   img, .social-icon, .home-icon, .toggle-img {
+      transform: scale(3);
+   }
+   footer {
+      flex-wrap: wrap;
+      margin-top: 2em;
+      gap: 80px;
+      padding: 6em;
+   }
+   .social-icons {
+      gap: 90px;
+   }
+   .social-icons a {
+      display: inline-block;
+   }
+   .dark-mode-container {
+      gap: 90px; 
+   }
+
+   .content-wrap {
+      flex-direction: row;
+      align-items: center;
+      margin: auto;
+   }
+
+   .side-image {
+      height: 350px;
+   }
+
+   .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      font-size: 2.5em;
+   }
+
+   .poem {
+      font-size: 2em;
+      line-height: 1.2;
+      width: 90%;
+      max-width: 700px; 
+      text-align: left;
+      margin: auto;
+   }
+}
+
