@@ -54,6 +54,8 @@ a {
 .bottom-image {
    height: 96px;
    object-fit: contain;
+   display: block;
+   margin: 2em 2em 4em 2em;
 }
 
 /* Header styling */
@@ -175,6 +177,7 @@ footer {
       justify-content: center;
       text-align: center;
       font-size: 2.5em;
+      margin-bottom: 3em;
    }
 
    .poem {
