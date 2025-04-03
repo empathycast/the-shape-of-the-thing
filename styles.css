@@ -51,6 +51,11 @@ a {
    object-fit: contain;
 }
 
+.bottom-image {
+   height: 96px;
+   object-fit: contain;
+}
+
 /* Header styling */
 header {
    text-align: center;
