@@ -21,10 +21,10 @@ body {
    font-family: monospace;
 }
 /* Dark mode styling */
-.dark-mode {
+html.dark-mode {
    background-color: #121212;
    color: #e0e0e0;
-}
+ }
 /* Remove link coloring and underlining */
 a {
    color: inherit;

@@ -3,9 +3,17 @@
 <head>
    <meta charset="UTF-8">
    <title>what is a man?</title>
-   <link rel="stylesheet" href="../../styles.css">
    <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32.png">
    <meta property="og:image" content="../../images/favicon-512.png">
+	<script>
+		(function() {
+			const isDark = localStorage.getItem("dark-mode") === "true";
+			if (isDark) {
+				document.documentElement.classList.add("dark-mode");
+			}
+		})();
+	</script>
+	<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body>
