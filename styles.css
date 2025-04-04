@@ -55,7 +55,14 @@ a {
    height: 96px;
    object-fit: contain;
    display: block;
-   margin: 2em 2em 4em 2em;
+   margin: 2em 2em 2em 2em;
+}
+
+.tall-bottom-image {
+   height: 180px;
+   object-fit: contain;
+   display: block;
+   margin: 2em 2em 2em 2em;
 }
 
 /* Header styling */
@@ -168,6 +175,14 @@ footer {
 
    .side-image {
       height: 350px;
+   }
+
+   .bottom-image {
+      margin: 2em 2em 4em 2em;
+   }
+
+   .tall-bottom-image {
+      margin: 5em 2em 10em 2em;
    }
 
    .content {
