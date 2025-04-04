@@ -52,7 +52,7 @@ a {
 }
 
 .bottom-image {
-   height: 96px;
+   height: 128px;
    object-fit: contain;
    display: block;
    margin: 2em 2em 2em 2em;
@@ -178,7 +178,7 @@ footer {
    }
 
    .bottom-image {
-      margin: 2em 2em 4em 2em;
+      margin: 4em 2em 6em 2em;
    }
 
    .tall-bottom-image {
