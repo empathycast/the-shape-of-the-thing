@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
 	const freireImages = [
 		"../../images/bottom/freire/paulo_freire_colour_1.png",
-		"../../images/bottom/freire/paulo_freire_colour_2.png",
-		"../../images/bottom/freire/paulo_freire_colour_3.png",
-		"../../images/bottom/freire/paulo_freire_colour_4.png",
+		//"../../images/bottom/freire/paulo_freire_colour_2.png",
+		//"../../images/bottom/freire/paulo_freire_colour_3.png",
+		//"../../images/bottom/freire/paulo_freire_colour_4.png",
 		"../../images/bottom/freire/paulo_freire_monochrome.png",
 		"../../images/bottom/freire/paulo_freire_young.png",
-		"../../images/bottom/freire/paulo_freire_youngish.png",
+		//"../../images/bottom/freire/paulo_freire_youngish.png",
 		"../../images/bottom/freire/freire_pencil.png"
 	];
 
