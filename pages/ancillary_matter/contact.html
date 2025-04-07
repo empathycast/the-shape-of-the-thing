@@ -45,31 +45,8 @@
 			<p id="status-message" class="status-message"></p>
 		</div>
 
-		<script type="text/javascript" 
-			src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-		</script>
-		<script type="text/javascript">
-			(function () {
-				emailjs.init({
-					publicKey: 'inIZcPYGCIyeJ7l_E',
-				});
-			})();
-
-			document.getElementById('contact-form').addEventListener('submit', function (event) {
-				event.preventDefault();
-				const statusMessage = document.getElementById('status-message');
-				statusMessage.innerText = "sending...";
-
-				emailjs.sendForm('service_j5m7d0s', 'template_mnibgkh', this)
-				.then(function () {
-					statusMessage.innerText = "message sent successfully :)";
-					document.getElementById('contact-form').reset();
-				}, function (error) {
-					statusMessage.innerText = "failed to send message :( try again";
-					console.error('EmailJS error:', error);
-				});
-			});
-		</script>
+		<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+		<script src="../../scripts/contact.js"></script>
       
       <img src="../../images/bottom/pigeon.png" alt="pigeon" class="bottom-image">
       

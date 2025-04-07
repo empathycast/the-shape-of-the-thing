@@ -150,13 +150,12 @@ footer {
 }
 .contact-form input,
 .contact-form textarea {
-  width: 100%;
-  max-width: 500px;
-  box-sizing: border-box;
-  font-family: monospace;
-  font-size: 1em;
-  padding: 0.5em;
-  margin-top: 0.5em;
+   background-color: #f0f0f0;
+   width: 100%;
+   max-width: 500px;
+   box-sizing: border-box;
+   padding: 0.5em;
+   margin-top: 0.5em;
 }
 
 /* desktop styling */
