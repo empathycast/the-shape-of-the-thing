@@ -24,19 +24,52 @@
          <h2>contact</h2>
          <br>
       </header>
+         
+		<form id="contact-form" class="contact-form">
+			<div class="form-row">
+				<label for="name">name:</label><br><br>
+				<input type="text" name="name" id="name" required>
+			</div>
+			<div class="form-row">
+				<label for="email">email:</label>
+				<input type="email" name="email" id="email" required>
+			</div>
+			<div class="form-row">
+				<label for="message">message:</label>
+				<textarea name="message" id="message" rows="5" required></textarea>
+			</div>
+			<button type="submit">send</button>
+		</form>
 
-		<div class="poem">
-         <p>
-            a form<br>
-            <br>
-            to send mail<br>
-            <br>
-            so that it may be received<br>
-            <br>
-            and responded to<br>
-            <br>
-         </p>
-      </div>
+		<div class="status-container">
+			<p id="status-message" class="status-message"></p>
+		</div>
+
+		<script type="text/javascript" 
+			src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+		</script>
+		<script type="text/javascript">
+			(function () {
+				emailjs.init({
+					publicKey: 'inIZcPYGCIyeJ7l_E',
+				});
+			})();
+
+			document.getElementById('contact-form').addEventListener('submit', function (event) {
+				event.preventDefault();
+				const statusMessage = document.getElementById('status-message');
+				statusMessage.innerText = "sending...";
+
+				emailjs.sendForm('service_j5m7d0s', 'template_mnibgkh', this)
+				.then(function () {
+					statusMessage.innerText = "message sent successfully :)";
+					document.getElementById('contact-form').reset();
+				}, function (error) {
+					statusMessage.innerText = "failed to send message :( try again";
+					console.error('EmailJS error:', error);
+				});
+			});
+		</script>
       
       <img src="../../images/bottom/pigeon.png" alt="pigeon" class="bottom-image">
       
