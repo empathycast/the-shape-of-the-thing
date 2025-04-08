@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
 	const freireImages = [
+		"../../images/bottom/poise/martin_luther_king_jr.png",
+		"../../images/bottom/poise/oscar_romero.png",
+		"../../images/bottom/poise/rachel_corrie.png",
 		"../../images/bottom/poise/sophie_scholl.png",
 		"../../images/bottom/poise/tank_man.png",
 		"../../images/bottom/poise/tousaint_loverture.png"
