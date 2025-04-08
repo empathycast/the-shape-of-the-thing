@@ -123,7 +123,6 @@ footer {
 /* contact form */
 .contact-form {
    max-width: 600px;
-   margin-top: 4em;
 }
 .form-row {
    display: flex;
