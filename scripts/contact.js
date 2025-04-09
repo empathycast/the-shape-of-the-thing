@@ -41,14 +41,15 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 
 		statusMessage.innerText = "sending...";
-
+		
 		emailjs.sendForm('service_j5m7d0s', 'template_mnibgkh', form)
-			.then(function () {
+		  .then(function () {
 				statusMessage.innerText = "message sent successfully :)";
 				form.reset();
-			}, function (error) {
-				statusMessage.innerText = "failed to send message :( try again";
+		  }, function (error) {
+				const errorText = (error.text || 'unknown error').slice(0, 25);
+				statusMessage.innerHTML = `failed to send message :( <br>${errorText}`;
 				console.error('EmailJS error:', error);
-			});
+		  });
 	});
 });
