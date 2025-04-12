@@ -68,50 +68,6 @@ a {
    margin: 2em 2em 2em 2em;
 }
 
-/* bookshelf */
-.bookshelf {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
-}
-.book-main-column {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
-	max-width: 200px;
-}
-.book {
-	width: 75px;
-	cursor: pointer;
-	border-radius: 0.5em;
-}
-.book.main {
-	width: 150px;
-	border-radius: 1em;
-	margin-top: 1em;
-	margin-bottom: 1em;
-}
-.book-wrapper.small {
-  margin-bottom: 3em;
-}
-.book-title {
-	font-weight: bold;
-	font-size: 1.5em;
-	width: 50vw;
-}
-.book-author {
-	font-size: 1.2em;
-	color: #555;
-	width: 50vw;
-}
-.book-description {
-	font-size: 1.1em;
-	color: #666;
-	width: 300px;
-}
-
 /* Header styling */
 header {
    text-align: center;
@@ -166,42 +122,6 @@ footer {
 .toggle-img {
    width: 32px;
    height: 32px;
-}
-
-/* contact form */
-.contact-form {
-   max-width: 600px;
-}
-.form-row {
-   display: flex;
-   align-items: center;
-   margin-bottom: 1em;
-}
-.form-row label {
-   flex: 1;
-   text-align: right;
-   margin-right: 1em;
-}
-.form-row input, .form-row textarea {
-   flex: 2;
-   padding: 0.5em;
-   border-radius: 0.5em;
-}
-#contact-form button {
-   display: block;
-   margin: 2em auto;
-   padding: 0.5em 2em;
-   border-radius: 0.5em;
-   font-family: monospace;
-   font-size: 1em;
-}
-.contact-form input, .contact-form textarea {
-   background-color: #f0f0f0;
-   width: 100%;
-   max-width: 500px;
-   box-sizing: border-box;
-   padding: 0.5em;
-   margin-top: 0.5em;
 }
 
 .content {
@@ -264,34 +184,6 @@ footer {
    .tall-bottom-image {
       margin: 5em 2em 10em 2em;
    }
-   .contact-form {
-      font-size: 2.6em;
-   }
-   .form-row input,
-   .form-row textarea {
-      font-size: 1em;
-   }
-   .status-message {
-      font-size: 2.6em;
-      margin: 2em 1em 4em 1em;
-   }
-   .book-main-column {
-      max-width: 550px;
-   }
-   .book.main {
-      width: 125px;
-      border-radius: .25em;
-      margin-top: 7em;
-      margin-bottom: 7em;
-   }
-   .book {
-      width: 45px;
-      border-radius: 0.1em; 
-   }
-   .book-description {
-	   width: 70vw;
-	   font-size: 0.8em;
-   } 
 
    .content {
       flex: 1;

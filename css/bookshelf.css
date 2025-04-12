@@ -1,0 +1,64 @@
+/* bookshelf */
+.bookshelf {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.book-main-column {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	max-width: 200px;
+}
+.book {
+	width: 75px;
+	cursor: pointer;
+	border-radius: 0.5em;
+}
+.book.main {
+	width: 150px;
+	border-radius: 1em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+.book-wrapper.small {
+   margin-bottom: 3em;
+}
+.book-title {
+	font-weight: bold;
+	font-size: 1.5em;
+	width: 50vw;
+}
+.book-author {
+	font-size: 1.2em;
+	color: #555;
+	width: 50vw;
+}
+.book-description {
+	font-size: 1.1em;
+	color: #666;
+	width: 300px;
+}
+
+/* mobile bookshelf overrides */
+@media (pointer: coarse) {
+	.book-main-column {
+      max-width: 550px;
+   }
+   .book.main {
+      width: 125px;
+      border-radius: .25em;
+      margin-top: 7em;
+      margin-bottom: 7em;
+   }
+   .book {
+      width: 45px;
+      border-radius: 0.1em; 
+   }
+   .book-description {
+	   width: 70vw;
+	   font-size: 0.8em;
+   }
+}
