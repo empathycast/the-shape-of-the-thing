@@ -89,6 +89,29 @@ a {
    cursor: default;
    border-radius: 1em;
 }
+.book-wrapper {
+  text-align: center;
+}
+.book-wrapper img {
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+.book-title {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+.book-author {
+  font-size: 1.2em;
+  color: #555;
+}
+.book-description {
+  margin-top: 0.5em;
+  font-size: 1.1em;
+  color: #444;
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
 @media (pointer: coarse) {
    .bookshelf {
       gap: 6em;
