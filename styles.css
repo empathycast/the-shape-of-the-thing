@@ -105,11 +105,8 @@ a {
 }
 .book-description {
 	font-size: 1.1em;
-	color: #444;
+	color: #666;
 	width: 300px;
-}
-@media (pointer: coarse) {
-   
 }
 
 /* Header styling */
@@ -290,7 +287,8 @@ footer {
    }
    .book-description {
 	   width: 70vw;
-   }
+	   font-size: 0.8em;
+   } 
 
    .content {
       flex: 1;

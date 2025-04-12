@@ -5,7 +5,7 @@ const bookData = [
       title: "The Will to Change",
       author: "bell hooks",
       year: "2004",
-      description: "A powerful exploration of patriarchy, love, and healing for men.",
+      description: "written with love and kindness. bell hooks illustrates the bondage men are subject to, and subject each other to. she talks about how to let go of aggrieved opposition, and be whole",
       link: "https://dn721601.ca.archive.org/0/items/the-will-to-change-men-masculinity-and-love-by-bell-hooks-z-lib.org.epub/The%20Will%20to%20Change%20Men%2C%20Masculinity%2C%20and%20Love%20by%20bell%20hooks%20%28z-lib.org%29.epub.pdf"
    },
    {
@@ -14,7 +14,7 @@ const bookData = [
       title: "Pedagogy of the Oppressed",
       author: "Paulo Freire",
       year: "1970",
-      description: "A foundational text on critical pedagogy and liberation education.",
+      description: "the best thing I've read. Freire sees with open eyes, describing the nature of our dehumanization, and how we liberate ourselves and each other. that we empower all human people to act of and for themselves",
       link: "https://www.historyisaweapon.com/defcon2/pedagogy/"
    },
    {
@@ -23,7 +23,7 @@ const bookData = [
       title: "Capitalist Realism",
       author: "Mark Fisher",
       year: "2009",
-      description: "An incisive critique of neoliberal ideology and its cultural consequences.",
+      description: "a discussion of the eclipsing nature of money under capitalism. dismantling the lie that we cannot organize ourselves in any other way. examining the human crimes caused by creating capitalist structures",
       link: "https://files.libcom.org/files/Capitalist%20Realism_%20Is%20There%20No%20Alternat%20-%20Mark%20Fisher.pdf"
    },
    {
@@ -32,7 +32,7 @@ const bookData = [
       title: "Tao Te Ching",
       author: "Lao Tzu",
       year: "4th c. BCE",
-      description: "words words words",
+      description: "poetry about the Way. meditations on the appropriate way to live; what's good and what's nonsense. this translation is excellent",
       link: "https://github.com/nrrb/tao-te-ching/blob/master/Ursula%20K%20Le%20Guin.md"
    }
 ];
