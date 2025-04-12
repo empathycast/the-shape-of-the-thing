@@ -45,6 +45,21 @@ a {
    flex: 1;
 }
 
+.button {
+  display: inline-block;
+  padding: 0.6em 1.2em;
+  background-color: #444;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 0.4em;
+  font-family: monospace;
+  font-size: 1em;
+  transition: background-color 0.2s ease;
+}
+.button:hover {
+  background-color: #666;
+}
+
 /* images */
 .side-image {
    height: 600px;
