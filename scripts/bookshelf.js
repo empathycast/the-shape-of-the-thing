@@ -25,62 +25,95 @@ const bookData = [
       year: "2009",
       description: "An incisive critique of neoliberal ideology and its cultural consequences.",
       link: "https://files.libcom.org/files/Capitalist%20Realism_%20Is%20There%20No%20Alternat%20-%20Mark%20Fisher.pdf"
+   },
+   {
+      src: "../../images/books/tao_te_ching.jpg",
+      alt: "Tao Te Ching",
+      title: "Tao Te Ching",
+      author: "Lao Tzu",
+      year: "4th c. BCE",
+      description: "words words words",
+      link: "https://github.com/nrrb/tao-te-ching/blob/master/Ursula%20K%20Le%20Guin.md"
    }
 ];
 
 function updateBooks(mainIndex) {
-   const shelf = document.getElementById("bookshelf");
-   shelf.innerHTML = "";
+	const shelf = document.getElementById("bookshelf");
+	shelf.innerHTML = "";
 
-   const prevIndex = (mainIndex - 1 + bookData.length) % bookData.length;
-   const nextIndex = (mainIndex + 1) % bookData.length;
+	const prevIndex = (mainIndex - 1 + bookData.length) % bookData.length;
+	const nextIndex = (mainIndex + 1) % bookData.length;
 
-   [prevIndex, mainIndex, nextIndex].forEach((index) => {
-      const book = bookData[index];
+	const makeBook = (book, index) => {
+		const wrapper = document.createElement("div");
+		wrapper.className = "book-wrapper small";
 
-      const wrapper = document.createElement("div");
-      wrapper.className = "book-wrapper" + (index === mainIndex ? " main" : "");
+		const img = document.createElement("img");
+		img.src = book.src;
+		img.alt = book.alt;
+		img.className = "book";
 
-      const metaTop = document.createElement("div");
+		img.onclick = () => updateBooks(index);
+		wrapper.appendChild(img);
+		return wrapper;
+	};
 
-      const img = document.createElement("img");
-      img.src = book.src;
-      img.alt = book.alt;
-      img.className = "book" + (index === mainIndex ? " main" : "");
+	// Left book
+	shelf.appendChild(makeBook(bookData[prevIndex], prevIndex));
 
-      if (index === mainIndex && book.link) {
-         const link = document.createElement("a");
-         link.href = book.link;
-         link.target = "_blank";
-         link.appendChild(img);
-         wrapper.appendChild(metaTop);
-         wrapper.appendChild(link);
-      } else {
-         img.onclick = () => updateBooks(index);
-         wrapper.appendChild(metaTop);
-         wrapper.appendChild(img);
-      }
+	// Main column
+	const mainBook = bookData[mainIndex];
+	const mainColumn = document.createElement("div");
+	mainColumn.className = "book-main-column";
 
-      if (index === mainIndex) {
-         const titleEl = document.createElement("div");
-         titleEl.className = "book-title";
-         titleEl.innerText = book.title;
+	// Title + Author
+	const metaTop = document.createElement("div");
+	metaTop.className = "book-meta-top";
 
-         const authorEl = document.createElement("div");
-         authorEl.className = "book-author";
-         authorEl.innerText = `${book.author} (${book.year})`;
+	const titleEl = document.createElement("div");
+	titleEl.className = "book-title";
+	titleEl.innerText = mainBook.title;
 
-         metaTop.appendChild(titleEl);
-         metaTop.appendChild(authorEl);
+	const authorEl = document.createElement("div");
+	authorEl.className = "book-author";
+	authorEl.innerText = `${mainBook.author} (${mainBook.year})`;
 
-         const description = document.createElement("div");
-         description.className = "book-description";
-         description.innerText = book.description;
-         wrapper.appendChild(description);
-      }
+	metaTop.appendChild(titleEl);
+	metaTop.appendChild(authorEl);
 
-      shelf.appendChild(wrapper);
-   });
+	// Main image
+	const imageWrapper = document.createElement("div");
+	imageWrapper.className = "book-image";
+
+	const mainImg = document.createElement("img");
+	mainImg.src = mainBook.src;
+	mainImg.alt = mainBook.alt;
+	mainImg.className = "book main";
+
+	if (mainBook.link) {
+		const link = document.createElement("a");
+		link.href = mainBook.link;
+		link.target = "_blank";
+		link.appendChild(mainImg);
+		imageWrapper.appendChild(link);
+	} else {
+		imageWrapper.appendChild(mainImg);
+	}
+
+	// Description
+	const description = document.createElement("div");
+	description.className = "book-description";
+	description.innerText = mainBook.description;
+
+	mainColumn.appendChild(metaTop);
+	mainColumn.appendChild(imageWrapper);
+	mainColumn.appendChild(description);
+	shelf.appendChild(mainColumn);
+
+	// Right book
+	shelf.appendChild(makeBook(bookData[nextIndex], nextIndex));
 }
 
 updateBooks(1);
+
+ 
