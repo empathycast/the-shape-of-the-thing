@@ -68,6 +68,41 @@ a {
    margin: 2em 2em 2em 2em;
 }
 
+/* bookshelf */
+.bookshelf {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 2em;
+   margin: 2em auto;
+   flex-wrap: nowrap;
+}
+.book {
+   width: 75px;
+   cursor: pointer;
+   opacity: 0.6;
+   border-radius: 0.5em; 
+}
+.book.main {
+   width: 150px;
+   opacity: 1;
+   cursor: default;
+   border-radius: 1em;
+}
+@media (pointer: coarse) {
+   .bookshelf {
+      gap: 6em;
+   }
+   .book {
+      width: 45px;
+      border-radius: 0.1em; 
+   }
+   .book.main {
+      width: 125px;
+      border-radius: .25em;
+   }
+}
+
 /* Header styling */
 header {
    text-align: center;
