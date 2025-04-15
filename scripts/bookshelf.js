@@ -32,7 +32,7 @@ const bookData = [
       title: "Tao Te Ching",
       author: "Lao Tzu",
       year: "4th c. BCE",
-      description: "poetry about the Way. meditations on the appropriate way to live; what's good and what's nonsense. this translation is excellent",
+      description: "poetry about the Way. meditations on the appropriate way to live; what's good and what's nonsense. sonorous, easy reading, which may be digested over a long time",
       link: "https://github.com/nrrb/tao-te-ching/blob/master/Ursula%20K%20Le%20Guin.md"
    }
 ];
